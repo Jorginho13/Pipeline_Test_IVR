@@ -12,7 +12,8 @@ pipeline {
      
       steps {
           script {			
-           java -jar jenkinsSTARC.jar 5060
+           chmod +x executeSTARCTest.sh
+		   ./executeSTARCTest.sh
         }
       }
     }
