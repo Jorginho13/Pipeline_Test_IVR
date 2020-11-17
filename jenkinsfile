@@ -11,10 +11,10 @@ pipeline {
  stage("paso 1"){
      
       steps {
-          script {			
-           sh "chmod +x executeSTARCTest.sh"
-		   sh "./executeSTARCTest.sh"
-        }
+		dir("files"){
+			sh "chmod +x executeSTARCTest.sh"
+		    sh "./executeSTARCTest.sh"
+		}
       }
     }
   }
