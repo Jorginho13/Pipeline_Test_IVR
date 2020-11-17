@@ -12,7 +12,7 @@ pipeline {
      
       steps {
           script {			
-           sh "java -jar jenkinsSTARC.jar 5060"
+           sh "nohup java -jar jenkinsSTARC.jar 5060"
         }
       }
     }
