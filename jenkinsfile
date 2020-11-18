@@ -16,7 +16,7 @@ pipeline {
      
       steps {
 		dir("files"){
-			echo "probando ${JAVA_COMMAND}"
+			sh "${JAVA_COMMAND} 5060"
 		}
       }
     }
