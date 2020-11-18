@@ -6,13 +6,17 @@ def jsonParse(def json) {
 pipeline {
   agent any
   
+  environment{
+	JAVA_COMMAND = "java -jar jenkinsSTARC.jar"
+  }
+  
   stages {
 
  stage("paso 1"){
      
       steps {
 		dir("files"){
-			echo "probando la ejecucion de un jar"
+			echo "probando ${JAVA_COMMAND}"
 		}
       }
     }
