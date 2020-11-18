@@ -16,7 +16,8 @@ pipeline {
      
       steps {
 		dir("files"){
-			sh "${JAVA_COMMAND} 5060"
+			sh "chmod +x executeSTARCTest.sh"
+			sh "./executeSTARCTest.sh"
 		}
       }
     }
