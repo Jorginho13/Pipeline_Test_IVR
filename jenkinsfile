@@ -6,17 +6,14 @@ def jsonParse(def json) {
 pipeline {
   agent any
   
-  tools{
-	jdk 'JDK Java'
-  }
-
   stages {
 
  stage("paso 1"){
      
       steps {
 		dir("files"){
-			sh "java -jar jenkinsSTARC.jar 5060"
+			echo "probando la ejecucion de un jar"
+			#sh "java -jar jenkinsSTARC.jar 5060"
 		}
       }
     }
