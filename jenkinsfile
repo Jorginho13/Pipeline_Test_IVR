@@ -12,7 +12,7 @@ pipeline {
      
       steps {
 		dir("files"){
-			sh "java -jar jenkinsSTARC.jar 5060"
+			sh "java -jar 'jenkinsSTARC.jar' 5060"
 		}
       }
     }
