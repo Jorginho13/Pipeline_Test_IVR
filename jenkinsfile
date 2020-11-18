@@ -13,7 +13,6 @@ pipeline {
       steps {
 		dir("files"){
 			echo "probando la ejecucion de un jar"
-			#sh "java -jar jenkinsSTARC.jar 5060"
 		}
       }
     }
