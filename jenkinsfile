@@ -7,7 +7,7 @@ pipeline {
   agent any
   
   environment{
-	EXECUTION_PLAN = "java -jar jenkinsSTARC.jar"
+	EXECUTION_PLAN = "5060"
   }
   
   stages {
@@ -16,7 +16,7 @@ pipeline {
      
       steps {
 		dir("files"){
-			bat "java -jar jenkinsSTARC.jar ${EXECUTION_PLAN}"
+			sh "java -jar jenkinsSTARC.jar ${EXECUTION_PLAN}"
 		}
       }
     }
