@@ -7,7 +7,7 @@ pipeline {
   agent any
   
   environment{
-	JAVA_COMMAND = "java -jar jenkinsSTARC.jar"
+	EXECUTION_PLAN = "java -jar jenkinsSTARC.jar"
   }
   
   stages {
@@ -16,8 +16,7 @@ pipeline {
      
       steps {
 		dir("files"){
-			sh "chmod +x executeSTARCTest.sh"
-			sh "./executeSTARCTest.sh"
+			bat "java -jar jenkinsSTARC.jar ${EXECUTION_PLAN}"
 		}
       }
     }
